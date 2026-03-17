@@ -1,7 +1,11 @@
 public class helloapp {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        String name = args[0];
-        System.out.println("Hello, " + name + "!");
+       //Default name
+	   string name="World";
+	   //Check if a name is provided as a command-line argument
+	   if(args.lenght>0){
+		   name=args[0];//use the provided name
+	   }
+	   System.out.println("Hello,"+name+"!");
     }
 }

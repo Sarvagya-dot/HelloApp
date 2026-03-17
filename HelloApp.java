@@ -5,12 +5,11 @@ public class HelloApp {
         } else {
             StringBuilder names = new StringBuilder();
             for (String name : args) {
-                if (names.length() > 0) {
-                    names.append(", ");
-                }
-                names.append(name);
+                names.append(name).append(", ");
             }
-            System.out.println("Hello, " + names + "!");
+            // Remove trailing ", "
+            String finalNames = names.substring(0, names.length() - 2);
+            System.out.println("Hello, " + finalNames + "!");
         }
     }
 }
